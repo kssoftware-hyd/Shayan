@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shayan Khan | Award-Winning Videographer & Editor</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-purple: #9333EA;
+            --primary-pink: #EC4899;
+            --primary-blue: #3B82F6;
+            --primary-cyan: #06B6D4;
+            --primary-orange: #F97316;
+            --primary-yellow: #EAB308;
+            --gradient-primary: linear-gradient(135deg, #9333EA 0%, #EC4899 50%, #F97316 100%);
+            --gradient-rainbow: linear-gradient(90deg, #9333EA, #3B82F6, #06B6D4, #10B981, #EAB308, #F97316, #EC4899);
+            --gradient-dark: linear-gradient(135deg, #1a0033 0%, #0d001a 100%);
+            --gradient-instagram: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            --dark-bg: #0f0025;
+            --darker-bg: #0a0015;
+            --card-bg: #1a0033;
+            --light-text: #ffffff;
+            --secondary-text: #c4b5fd;
+            --accent-gold: #ffd700;
+            --neon-purple: #a855f7;
+            --neon-pink: #f472b6;
+            --neon-cyan: #22d3ee;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #0f0025, #1a0033, #1e0a3d, #0a0015);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: var(--light-text);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(147, 51, 234, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 10% 80%, rgba(249, 115, 22, 0.12) 0%, transparent 50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--darker-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-rainbow);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gradient-primary);
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(15, 0, 37, 0.95) !important;
+            backdrop-filter: blur(15px);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 20px rgba(147, 51, 234, 0.3);
+            border-bottom: 2px solid transparent;
+            border-image: var(--gradient-rainbow) 1;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 5px 30px rgba(147, 51, 234, 0.5);
+        }
+
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
+            animation: rainbow-text 3s ease infinite;
+        }
+
+        @keyframes rainbow-text {
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(20deg); }
+        }
+
+        .nav-link {
+            color: var(--light-text) !important;
+            font-weight: 500;
+            margin: 0 15px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-rainbow);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 80%;
+        }
+
+        .nav-link:hover {
+            color: var(--neon-purple) !important;
+            text-shadow: 0 0 10px rgba(147, 51, 234, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.2) 0%, rgba(236, 72, 153, 0.15) 50%, rgba(59, 130, 246, 0.2) 100%),
+                        url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1920') center/cover no-repeat;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(147, 51, 234, 0.3), transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.2), transparent 50%),
+                        radial-gradient(circle at 50% 20%, rgba(59, 130, 246, 0.2), transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            animation: rainbow-text 3s ease infinite;
+        }
+
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #a855f7 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 80px rgba(168, 85, 247, 0.5);
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            color: var(--secondary-text);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .btn-custom {
+            padding: 15px 40px;
+            font-weight: 600;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-primary-custom {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.5);
+        }
+
+        .btn-primary-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #EC4899 0%, #9333EA 100%);
+            transition: all 0.4s ease;
+            z-index: -1;
+        }
+
+        .btn-primary-custom:hover::before {
+            left: 0;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(147, 51, 234, 0.7);
+        }
+
+        .btn-instagram {
+            background: var(--gradient-instagram);
+            color: white;
+            box-shadow: 0 10px 30px rgba(225, 48, 108, 0.4);
+        }
+
+        .btn-instagram:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(225, 48, 108, 0.6);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 50px;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--secondary-text);
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Cards */
+        .card-custom {
+            background: rgba(26, 0, 51, 0.6);
+            backdrop-filter: blur(10px);
+            border: 2px solid;
+            border-image: var(--gradient-rainbow) 1;
+            border-radius: 20px;
+            padding: 40px;
+            height: 100%;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+
+        .card-custom:hover::before {
+            opacity: 0.1;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-image: var(--gradient-primary) 1;
+            box-shadow: 0 20px 60px rgba(147, 51, 234, 0.5),
+                        0 0 40px rgba(236, 72, 153, 0.3);
+        }
+
+        .card-custom * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--light-text);
+        }
+
+        .card-text {
+            color: var(--secondary-text);
+            line-height: 1.8;
+        }
+
+        /* Skills */
+        .skill-badge {
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid;
+            border-image: var(--gradient-rainbow) 1;
+            color: var(--light-text);
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            margin: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(147, 51, 234, 0.6);
+            border-image: none;
+            border-color: transparent;
+        }
+
+        /* Achievement Cards */
+        .achievement-card {
+            background: rgba(26, 0, 51, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px 30px;
+            text-align: center;
+            border: 2px solid;
+            border-image: var(--gradient-rainbow) 1;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, var(--primary-purple), var(--primary-pink), var(--primary-blue), transparent 30%);
+            animation: rotate 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .achievement-card:hover::before {
+            opacity: 0.3;
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 20px 60px rgba(147, 51, 234, 0.6),
+                        0 0 40px rgba(236, 72, 153, 0.4);
+            border-image: var(--gradient-primary) 1;
+        }
+
+        .achievement-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .achievement-label {
+            font-size: 1.2rem;
+            color: var(--secondary-text);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Experience Section */
+        .experience-card {
+            background: rgba(26, 0, 51, 0.6);
+            backdrop-filter: blur(10px);
+            border-left: 4px solid;
+            border-image: var(--gradient-rainbow) 1;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 40px rgba(147, 51, 234, 0.5);
+            border-image: var(--gradient-primary) 1;
+        }
+
+        .experience-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-company {
+            color: var(--secondary-text);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+            height: 300px;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.95), rgba(236, 72, 153, 0.95));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .portfolio-text {
+            text-align: center;
+            color: white;
+        }
+
+        .portfolio-text h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: rgba(26, 0, 51, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            border: 2px solid;
+            border-image: var(--gradient-rainbow) 1;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(147, 51, 234, 0.5);
+            border-image: var(--gradient-primary) 1;
+        }
+
+        .testimonial-quote {
+            font-size: 3rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: var(--secondary-text);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--light-text);
+        }
+
+        .testimonial-role {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--gradient-dark);
+            position: relative;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(147, 51, 234, 0.1);
+            border-radius: 15px;
+            border: 2px solid;
+            border-image: var(--gradient-rainbow) 1;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info-item:hover {
+            background: rgba(147, 51, 234, 0.2);
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.4);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .contact-text h5 {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-text a {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-text a:hover {
+            filter: brightness(1.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker-bg);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 2px solid;
+            border-image: var(--gradient-rainbow) 1;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(147, 51, 234, 0.1);
+            border: 2px solid;
+            border-image: var(--gradient-rainbow) 1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            color: var(--light-text);
+        }
+
+        .social-icon:hover {
+            background: var(--gradient-primary);
+            color: white;
+            transform: translateY(-5px) rotate(360deg);
+            box-shadow: 0 10px 25px rgba(147, 51, 234, 0.5);
+            border-image: none;
+        }
+
+        /* Award Badge */
+        .award-badge {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 20px rgba(147, 51, 234, 0.5);
+        }
+
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+            cursor: pointer;
+            z-index: 9999;
+            transition: all 0.4s ease;
+            animation: whatsapp-pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 12px 50px rgba(37, 211, 102, 0.8);
+        }
+
+        @keyframes whatsapp-pulse {
+            0%, 100% {
+                box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+            }
+            50% {
+                box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6), 
+                            0 0 0 15px rgba(37, 211, 102, 0.2),
+                            0 0 0 30px rgba(37, 211, 102, 0.1);
+            }
+        }
+
+        /* WhatsApp Chatbot Widget */
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 120px;
+            right: 30px;
+            width: 350px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            z-index: 9998;
+            display: none;
+            overflow: hidden;
+            animation: slideIn 0.3s ease;
+        }
+
+        .whatsapp-widget.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .whatsapp-header {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            padding: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .whatsapp-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .whatsapp-info h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .whatsapp-info p {
+            margin: 0;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .whatsapp-close {
+            margin-left: auto;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .whatsapp-body {
+            padding: 20px;
+            background: #ece5dd;
+            min-height: 200px;
+        }
+
+        .whatsapp-message {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .whatsapp-message::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 10px;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-right: 10px solid white;
+            border-bottom: 10px solid transparent;
+        }
+
+        .whatsapp-footer {
+            padding: 15px 20px;
+            background: white;
+            border-top: 1px solid #ddd;
+        }
+
+        .whatsapp-input {
+            display: flex;
+            gap: 10px;
+        }
+
+        .whatsapp-input input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+        }
+
+        .whatsapp-send {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-send:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .quick-reply {
+            display: inline-block;
+            background: #dcf8c6;
+            padding: 8px 15px;
+            border-radius: 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .quick-reply:hover {
+            background: #25D366;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .navbar-brand {
+                font-size: 1.3rem;
+            }
+
+            .whatsapp-widget {
+                width: 90%;
+                right: 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">SHAYAN KHAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 hero-content" data-aos="fade-right">
+                    <div class="award-badge">
+                        <i class="fas fa-trophy"></i>
+                        #1 Videographer in Nanded
+                    </div>
+                    <p class="hero-subtitle">Professional Creative</p>
+                    <h1 class="hero-title">Shayan Khan</h1>
+                    <p class="hero-description">
+                        Award-winning Videographer & Editor crafting viral content with 5+ years of experience. 
+                        Specializing in social media management and visual storytelling that captivates audiences.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap mb-4">
+                        <a href="#contact" class="btn btn-custom btn-primary-custom">Hire Me</a>
+                        <a href="https://www.instagram.com/nanded__updates" target="_blank" class="btn btn-custom btn-instagram">
+                            <i class="fab fa-instagram me-2"></i> Instagram
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">800+</span>
+                            <span class="stat-label">Videos Edited</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Followers Gained</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate creator turning visions into viral reality</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="card-custom">
+                        <div class="card-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="card-title">My Profile</h3>
+                        <p class="card-text">
+                            A highly skilled and creative professional with 5 years of experience in video editing and social media management. 
+                            I specialize in creating impactful content, smooth transitions, professional color grading, and building powerful social media brands. 
+                            Currently pursuing BCA (1st Year) and dedicated to delivering high-quality visual storytelling that resonates with audiences.
+                        </p>
+                        <ul class="mt-3" style="color: var(--secondary-text); line-height: 2;">
+                            <li><i class="fas fa-check text-success me-2"></i> 5 Years of Professional Experience</li>
+                            <li><i class="fas fa-check text-success me-2"></i> 800+ Videos Successfully Edited</li>
+                            <li><i class="fas fa-check text-success me-2"></i> Multiple Viral Content (1M+ Views)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card-custom">
+                        <div class="card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="card-title">Why Choose Me?</h3>
+                        <div class="card-text">
+                            <div class="mb-3">
+                                <h5><i class="fas fa-trophy text-warning me-2"></i> Award-Winning Excellence</h5>
+                                <p class="mb-0">Recognized as the #1 Videographer in Nanded with proven track record</p>
+                            </div>
+                            <div class="mb-3">
+                                <h5><i class="fas fa-tools text-info me-2"></i> Technical Mastery</h5>
+                                <p class="mb-0">Expert in Adobe Premiere Pro, After Effects, Final Cut Pro & more</p>
+                            </div>
+                            <div class="mb-3">
+                                <h5><i class="fas fa-chart-line text-success me-2"></i> Proven Results</h5>
+                                <p class="mb-0">Consistently deliver viral content with 1M+ views and engagement</p>
+                            </div>
+                            <div>
+                                <h5><i class="fas fa-lightbulb text-danger me-2"></i> Creative Innovation</h5>
+                                <p class="mb-0">Unique storytelling approach in every project</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills" style="background: var(--gradient-dark);">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Mastering the tools that bring stories to life</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-badge"><i class="fab fa-adobe me-2"></i> Adobe Premiere Pro</div>
+                <div class="skill-badge"><i class="fab fa-adobe me-2"></i> After Effects</div>
+                <div class="skill-badge"><i class="fas fa-film me-2"></i> Final Cut Pro</div>
+                <div class="skill-badge"><i class="fas fa-video me-2"></i> Filmora</div>
+                <div class="skill-badge"><i class="fas fa-palette me-2"></i> Canva</div>
+                <div class="skill-badge"><i class="fab fa-adobe me-2"></i> Photoshop</div>
+                <div class="skill-badge"><i class="fas fa-share-alt me-2"></i> Social Media Growth</div>
+                <div class="skill-badge"><i class="fas fa-adjust me-2"></i> Color Grading</div>
+                <div class="skill-badge"><i class="fas fa-image me-2"></i> Thumbnail Design</div>
+                <div class="skill-badge"><i class="fas fa-cut me-2"></i> Video Transitions</div>
+                <div class="skill-badge"><i class="fas fa-music me-2"></i> Audio Editing</div>
+                <div class="skill-badge"><i class="fas fa-chart-bar me-2"></i> Analytics & Insights</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section" id="achievements">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-subtitle">Numbers that speak for excellence</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="achievement-card">
+                        <div class="achievement-number">800+</div>
+                        <div class="achievement-label">Videos Edited</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="achievement-card">
+                        <div class="achievement-number">5</div>
+                        <div class="achievement-label">Years Experience</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="achievement-card">
+                        <div class="achievement-number">50K+</div>
+                        <div class="achievement-label">Followers Gained</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="achievement-card">
+                        <div class="achievement-number">1M+</div>
+                        <div class="achievement-label">Total Views</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience" style="background: var(--gradient-dark);">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">Professional journey of creating viral content</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="experience-card">
+                        <h3 class="experience-title">Freelance Video Editor & Social Media Manager</h3>
+                        <p class="experience-company">Self-Employed | 2019 - Present</p>
+                        <ul style="color: var(--secondary-text); line-height: 1.8;">
+                            <li>Managed multiple high-profile social media accounts with 50K+ combined followers</li>
+                            <li>Created viral video content achieving 1M+ views across platforms</li>
+                            <li>Specialized in Instagram Reels, YouTube Shorts, and trending content</li>
+                            <li>Provided end-to-end video production: filming, editing, color grading, and publishing</li>
+                            <li>Built strong social media presence for local businesses and influencers</li>
+                        </ul>
+                        <p class="mt-3"><strong style="color: var(--neon-purple);">Key Clients:</strong></p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge" style="background: var(--gradient-primary);">@nanded_updates</span>
+                            <span class="badge" style="background: var(--gradient-primary);">@nandedkar_mh26_news</span>
+                            <span class="badge" style="background: var(--gradient-primary);">@majhamaharashtra</span>
+                            <span class="badge" style="background: var(--gradient-primary);">Multiple Local Businesses</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section" id="portfolio">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="section-subtitle">Visual stories that made an impact</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600" alt="Social Media Content">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-text">
+                                <h4>Social Media Content</h4>
+                                <p>Viral Instagram Reels & Stories</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600" alt="Event Coverage">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-text">
+                                <h4>Event Coverage</h4>
+                                <p>Professional Event Videography</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1579869847514-7c1a19d2d2ad?w=600" alt="Commercial Projects">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-text">
+                                <h4>Commercial Projects</h4>
+                                <p>Brand Videos & Advertisements</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600" alt="Color Grading">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-text">
+                                <h4>Color Grading</h4>
+                                <p>Professional Color Correction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=600" alt="Motion Graphics">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-text">
+                                <h4>Motion Graphics</h4>
+                                <p>After Effects Animations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1598653222000-6b7b7a552625?w=600" alt="YouTube Content">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-text">
+                                <h4>YouTube Content</h4>
+                                <p>Long-form Video Production</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials" style="background: var(--gradient-dark);">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">What people say about my work</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">
+                            Shayan's editing skills are phenomenal! Our Instagram engagement skyrocketed after he started managing our content. Highly recommended!
+                        </p>
+                        <p class="testimonial-author">Rahul Deshmukh</p>
+                        <p class="testimonial-role">Business Owner</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">
+                            Professional, creative, and always delivers on time. Shayan transformed our social media presence completely. Best videographer in Nanded!
+                        </p>
+                        <p class="testimonial-author">Priya Sharma</p>
+                        <p class="testimonial-role">Influencer</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">
+                            Working with Shayan was a game-changer. His attention to detail and creative vision resulted in viral content that exceeded our expectations.
+                        </p>
+                        <p class="testimonial-author">Amit Patil</p>
+                        <p class="testimonial-role">Marketing Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Ready to create something amazing? Get in touch!</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-6" data-aos="fade-right">
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h5>Phone</h5>
+                                    <a href="tel:7020351023">7020351023</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-left">
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h5>Email</h5>
+                                    <a href="mailto:shayanpathan307@gmail.com">shayanpathan307@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-right">
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h5>Instagram</h5>
+                                    <a href="https://www.instagram.com/nanded__updates" target="_blank">@nanded__updates</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-left">
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h5>Location</h5>
+                                    <p class="mb-0" style="color: var(--secondary-text);">Nanded, Maharashtra</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5" data-aos="zoom-in">
+                        <a href="mailto:shayanpathan307@gmail.com" class="btn btn-custom btn-primary-custom btn-lg">
+                            <i class="fas fa-envelope me-2"></i> Send Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/nanded__updates" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:shayanpathan307@gmail.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:7020351023" class="social-icon">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+			<p style="color: var(--secondary-text);">
+			  &copy; 2026 
+			  <a href="http://kssoftware.infinityfree.me/" target="_blank" style="color: inherit; text-decoration: none;">
+				KS_SOFTWARE
+			  </a>. 
+			  All Rights Reserved.
+			</p>            <p style="color: var(--secondary-text); font-size: 0.9rem;">
+                Award-Winning Videographer & Editor | Nanded, Maharashtra
+            </p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float" id="whatsappBtn" onclick="toggleWhatsAppWidget()">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <!-- WhatsApp Chatbot Widget -->
+    <div class="whatsapp-widget" id="whatsappWidget">
+        <div class="whatsapp-header">
+            <div class="whatsapp-avatar">
+                <i class="fas fa-user" style="color: #25D366;"></i>
+            </div>
+            <div class="whatsapp-info">
+                <h4>Shayan Khan</h4>
+                <p>Online - Ready to help!</p>
+            </div>
+            <div class="whatsapp-close" onclick="toggleWhatsAppWidget()">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="whatsapp-body">
+            <div class="whatsapp-message">
+                <p style="margin: 0; color: #333;">👋 Hi! I'm Shayan Khan, Award-Winning Videographer & Editor.</p>
+                <p style="margin: 10px 0 0 0; color: #666; font-size: 0.9rem;">How can I help you today?</p>
+            </div>
+            <div style="margin-top: 15px;">
+                <div class="quick-reply" onclick="sendQuickReply('I need video editing services')">
+                    🎬 Video Editing
+                </div>
+                <div class="quick-reply" onclick="sendQuickReply('I want social media management')">
+                    📱 Social Media
+                </div>
+                <div class="quick-reply" onclick="sendQuickReply('I need color grading')">
+                    🎨 Color Grading
+                </div>
+                <div class="quick-reply" onclick="sendQuickReply('Tell me about pricing')">
+                    💰 Pricing Info
+                </div>
+            </div>
+        </div>
+        <div class="whatsapp-footer">
+            <div class="whatsapp-input">
+                <input type="text" id="whatsappInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+                <button class="whatsapp-send" onclick="sendWhatsAppMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarCollapse.classList.remove('show');
+                    }
+                }
+            });
+        });
+
+        // WhatsApp Widget Functions
+        function toggleWhatsAppWidget() {
+            const widget = document.getElementById('whatsappWidget');
+            widget.classList.toggle('active');
+        }
+
+        function sendQuickReply(message) {
+            const phoneNumber = '917020351023';
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        function sendWhatsAppMessage() {
+            const input = document.getElementById('whatsappInput');
+            const message = input.value.trim();
+            
+            if (message) {
+                const phoneNumber = '917020351023';
+                const encodedMessage = encodeURIComponent(message);
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+                window.open(whatsappUrl, '_blank');
+                input.value = '';
+            }
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendWhatsAppMessage();
+            }
+        }
+
+        // Close widget when clicking outside
+        document.addEventListener('click', function(event) {
+            const widget = document.getElementById('whatsappWidget');
+            const btn = document.getElementById('whatsappBtn');
+            
+            if (widget.classList.contains('active') && 
+                !widget.contains(event.target) && 
+                !btn.contains(event.target)) {
+                widget.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
